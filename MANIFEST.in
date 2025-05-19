@@ -1,0 +1,22 @@
+# Include the license file
+include LICENSE
+include README.md
+include CHANGELOG.txt
+
+# Include the documentation
+recursive-include *.txt *.py
+
+# Include tests
+recursive-include tests *.py
+
+# Include necessary package data
+recursive-include dataframe_image *.py *.json
+
+# Include all Python source files 
+global-include *.py
+
+# Exclude development and build files
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store
+global-exclude .git* .coverage .pytest_cache .tox
+global-exclude .vscode/* .idea/* *.swp *.bak
+global-exclude dist/* build/* *.egg-info/*
